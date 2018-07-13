@@ -31,10 +31,13 @@
             background-size: cover;
         }
         .wrapper {
-            max-width: 500px;
+            max-width: 50%;
         }
     </style>
     <style type="text/css">
+        .content form {
+            width: 100%;
+        }
         .content form input {
             margin: 0 0 30px;
             padding: 15px;
@@ -43,8 +46,13 @@
             background: #F7F7F7;
             border: 0;
         }
-        .content form .btn.zoombtn {
-            font-weight: bold;
+        .content form #input-area, #output-area {
+            height: 250px;
+            min-height: 250px;
+            min-width: 90%;
+            max-width: 90%;
+            margin: 0 0 30px;
+            padding: 15px;
         }
     </style>
 </head>
@@ -58,14 +66,16 @@
                 <div class="post-title">
                     <h1>SMSP <span style="color: #CCCCCC">- alpha</span></h1>
                 </div>
-                <form id="input-form" action="#" method="post" style="text-align: center;">
+                <form id="input-form" style="text-align: center;">
                     <input id="key-field" type="password" name="password" placeholder="Enter your personal key here" autofocus/>
                     <br>
-                    <input id="submit-button" type="submit" class="btn zoombtn" value="Open"/>
+                    <textarea id="input-area" placeholder="Enter your message here..."></textarea>
                     <br>
-                    <p id="wrong-key" style="display: none; color: red;">Incorrect key. Please try again.</p>
+                    <input id="submit-button" type="submit" class="btn zoombtn" value="Create"/>
+                    <br>
+                    <textarea id="output-area" style="display: none;"></textarea>
                 </form>
-                <script src="assets/js/page-loader.js"></script>
+                <script src="assets/js/protector.js"></script>
             </div>
         </div>
     </header>
