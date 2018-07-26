@@ -2,6 +2,7 @@
 function loadPage(key) {
     var hash = CryptoJS.SHA256(key).toString();
     var url = "messages/" + hash + "/index.html";
+    $("#wrong-key").hide();
 
     $.ajax({
         url: url,
