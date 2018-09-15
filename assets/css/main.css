@@ -176,6 +176,17 @@ body{
         background:#fff
     }
 }
+@font-face{
+    font-family:'sage sans';
+    font-style:normal;
+    font-weight:400;
+    src:url("../fonts/sagesans/woff/sagesans-Regular.woff") format("woff"),
+        url("../fonts/sagesans/ttf/sagesans-Regular.ttf") format("truetype");
+}
+#message{
+    font-family: 'sage sans', sans-serif;
+    font-size: 1em;
+}
 *{
     box-sizing:border-box
 }
